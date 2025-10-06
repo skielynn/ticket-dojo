@@ -1,0 +1,41 @@
+.btn {
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:focus {
+    outline: 3px solid #6B9AC4;
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: #6B9AC4;
+    color: white;
+}
+
+.btn-secondary {
+    background: #C0849E;
+    color: white;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #2F2F2F;
+    border: 1px solid #2F2F2F;
+
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.btn-md {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
