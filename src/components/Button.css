@@ -5,10 +5,10 @@
     padding: 0.5rem 1rem;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, opacity 0.2s;
 }
 
-.btn:focus {
+.btn:focus-visible {
     outline: 3px solid #6B9AC4;
     outline-offset: 2px;
 }
@@ -38,4 +38,10 @@
 .btn-md {
     font-size: 1rem;
     padding: 0.5rem 1rem;
+}
+
+.btn:disabled,
+.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
