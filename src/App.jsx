@@ -1,19 +1,29 @@
-// importing react so I can use JSX syntax also importing actual bttn component 
-import React from "react";
-import Button from "./components/Button";
+// App.jsx - defines navigation + which page renders for each URL
 
-function App() { //main component for whole app
-  return(
-    // div (wrapper) adding padding around the content
-    <div style={{ padding: "2rem" }}> 
-      <h1>Button Playground</h1> 
-      <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="ghost">Ghost</Button>
-      <Button variant="primary" size="sm">Small Button</Button>
-      <Button variant="primary" isLoading>Loading...</Button>
+import { Link, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ButtonsPlayground from "./pages/ButtonsPlayground";
+
+
+export default function App() {
+  return (
+    <div>
+      {/* Simple nav bar at the top */}
+      <nav style={{ display: "flex", gap: "1rem", padding: "1rem" }}>
+        {/* Link = client side navigation (no page reload ) */}
+        <Link to="/">Home</Link>
+        <Link to="/playground/buttons">Buttons Playground</Link>
+      </nav>
+
+      {/* Routes decide which component to render based on the URL path */}
+      <Routes>
+        {/* "/" renders the Home page */}
+        <Route path="/" element={<Home />} />
+
+        {/* "/playground/buttons" renders the button demo page */}
+        <Route path="/playground/buttons" element={<ButtonsPlayground />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
