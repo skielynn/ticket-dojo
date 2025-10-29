@@ -7,6 +7,7 @@ export default function Button({
     isLoading = false, // shows loading state if true 
     disabled = false, // disables the button if true 
     children, // 4 whatever I put between <Button>
+    type = "button", // default button so forms arent submitted on accident
     ...rest // captures wany other props like onClick type etc.
 }) {
       
